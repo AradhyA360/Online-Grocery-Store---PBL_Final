@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Online Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand"><a href="home.html">Online Grocery Store</a></div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html" id="logoutNav">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2 class="welcome-message">
+        Hello <span id="loggedInUserName"></span>, Welcome to Online Grocery
+        Store
+      </h2>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

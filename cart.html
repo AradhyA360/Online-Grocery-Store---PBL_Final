@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart - Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand"><a href="home.html">Online Grocery Store</a></div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html" id="logoutNav">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>My Cart</h2>
+      <div class="cart-content">
+        <div class="cart-items" id="cartItemsContainer">
+          <p id="emptyCartMessage" style="display: none">Your cart is empty.</p>
+        </div>
+        <div class="cart-summary">
+          <h3>Summary</h3>
+          <div class="summary-details">
+            <p>Total Items: <span id="cartTotalItems">0</span></p>
+            <p>Subtotal: ₹<span id="cartSubtotal">0.00</span></p>
+          </div>
+          <p class="total-amount">
+            Total Amount: ₹<span id="cartTotalAmount">0.00</span>
+          </p>
+          <button class="button checkout-button" id="checkoutButton">
+            Checkout
+          </button>
+        </div>
+      </div>
+      <div class="server-message" id="checkoutMessage"></div>
+
+      <div id="paymentOptions" class="payment-options" style="display: none">
+        <h3>Select Payment Method</h3>
+        <div class="payment-buttons">
+          <button class="button payment-button" data-payment-type="CreditCard">
+            Credit Card
+          </button>
+          <button class="button payment-button" data-payment-type="DebitCard">
+            Debit Card
+          </button>
+          <button class="button payment-button" data-payment-type="UPI">
+            UPI
+          </button>
+          <button class="button payment-button" data-payment-type="COD">
+            Cash on Delivery
+          </button>
+        </div>
+        <div class="server-message" id="paymentMessage"></div>
+      </div>
+
+      <div id="invoice" class="invoice" style="display: none">
+        <h3>Invoice</h3>
+        <p><strong>Order ID:</strong> <span id="invoiceOrderId"></span></p>
+        <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+        <p>
+          <strong>Payment Method:</strong>
+          <span id="invoicePaymentMethod"></span>
+        </p>
+        <div class="invoice-items" id="invoiceItemsContainer"></div>
+        <p class="invoice-total">
+          <strong>Grand Total:</strong> ₹<span id="invoiceGrandTotal"></span>
+        </p>
+        <p class="thank-you-message">Thank you for your purchase!</p>
+        <button class="button" id="backToHomeFromInvoice">Back to Home</button>
+      </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
